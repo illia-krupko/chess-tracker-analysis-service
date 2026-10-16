@@ -44,3 +44,7 @@ spring:
 security:
   gateway:
     secret: ${SHARED_GATEWAY_SECRET}
+
+gemini:
+  apiKey: ${GEMINI_API_KEY}
+  model: ${GEMINI_MODEL}
