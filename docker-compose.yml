@@ -1,0 +1,32 @@
+services:
+  analysis-service:
+    build: .
+    restart: on-failure
+    container_name: analysis_service
+
+    env_file:
+      - .env
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:${POSTGRES_DOCKER_PORT:-5432}/${POSTGRES_DB:-analysis_service_db}
+
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+
+      STOCKFISH_PATH: /usr/games/stockfish
+
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+
+    networks:
+      - gateway-analysis-service
+      - analysis-service-postgres
+      - analysis-service-kafka
+
+networks:
+  gateway-analysis-service:
+    external: true
+
+  analysis-service-postgres:
+    external: true
+
+  analysis-service-kafka:
+    external: true
