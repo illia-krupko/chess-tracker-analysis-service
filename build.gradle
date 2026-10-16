@@ -57,6 +57,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.36'
     annotationProcessor 'org.projectlombok:lombok:1.18.36'
     annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+    implementation 'com.google.genai:google-genai:1.78.0'
 }
 
 tasks.named('test') {
