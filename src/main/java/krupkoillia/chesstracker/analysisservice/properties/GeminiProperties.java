@@ -1,4 +1,4 @@
-package krupkoillia.chesstracker.analysisservice;
+package krupkoillia.chesstracker.analysisservice.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
