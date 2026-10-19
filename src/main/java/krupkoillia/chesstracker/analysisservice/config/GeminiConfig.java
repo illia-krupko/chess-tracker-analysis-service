@@ -3,7 +3,7 @@ package krupkoillia.chesstracker.analysisservice.config;
 import com.google.genai.Client;
 import com.google.genai.types.HttpOptions;
 import com.google.genai.types.HttpRetryOptions;
-import krupkoillia.chesstracker.analysisservice.GeminiProperties;
+import krupkoillia.chesstracker.analysisservice.properties.GeminiProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
